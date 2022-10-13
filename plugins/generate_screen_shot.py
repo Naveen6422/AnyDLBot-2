@@ -28,7 +28,7 @@ from helper_funcs.help_Nekmo_ffmpeg import generate_screen_shots
 from helper_funcs.display_progress import progress_for_pyrogram
 
 
-@pyrogram.Client.on_message(pyrogram.filters.command(["generatescss"]))
+@pyrogram.Client.on_message(pyrogram.filters.command(["generatess"]))
 async def generate_screen_shot(bot, update):
     if update.reply_to_message is not None:
         download_location = Config.DOWNLOAD_LOCATION + "/"
@@ -74,7 +74,7 @@ async def generate_screen_shot(bot, update):
             media_album_p = []
             if images is not None:
                 i = 0
-                caption = "© @Hx_AnyDLBot"
+                caption = "© @Teleroidgroup"
                 for image in images:
                     if os.path.exists(image):
                         if i == 0:
